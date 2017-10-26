@@ -1,9 +1,13 @@
 function words(str) {
-  let tam = []
-  for (var i = 0; i < str.length; i++) {
-    let arr = str.split('')
-    tam.push(arr[i],arr[i]+arr[i+1])
+  let arr = []
+  for (let i = 0; i < str.length; i++) {
+    let kos = ''
+    for (let j = i; j < str.length; j++) {
+      kos+=str[j]
+      arr.push(kos)
+    }
   }
-  return tam
+  return arr
 }
+
 console.log(words('cross'));
