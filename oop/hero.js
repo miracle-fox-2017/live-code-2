@@ -1,3 +1,4 @@
+
 class Hero {
   constructor(name, health, mana, defense, skill) {
     this.name = name;
@@ -6,9 +7,4 @@ class Hero {
     this.defense = defense;
     this.skill = skill;
   }
-}
-
-class Assassin extends Hero {
-  super();
-  this.skill = skill;
 }
