@@ -28,7 +28,7 @@ function dominoCard(arr, arrDeckMeja) {
            }
 
         }
-        return hasilMax
+        return `Keluarkan kartu ${hasilMax}`
     }
    
     
