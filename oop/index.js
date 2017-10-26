@@ -5,9 +5,9 @@ class Hero {
 		this.mana = mana;
 		this.defense = defense;
 	}
-	
-	skill(skillName = 'Skill Hero') {
-		return skillName;
+
+	skill() {
+		console.log('Skill '+this.name);
 	}
 }
 
@@ -16,17 +16,29 @@ class Assassin extends Hero {
 	constructor(name, health, mana, defense) {
 		super(name, health, mana, defense);
 	}
+
+	skill () {
+		console.log('Ciat..! Serangan tanpa bayangan..');
+	}
 }
 
 class Knight extends Hero {
 	constructor(name, health, mana, defense) {
 		super(name, health, mana, defense);
 	}
+
+	skill () {
+		console.log('Lemparan Perisai Suci');
+	}
 }
 
 class Mage extends Hero {
 	constructor(name, health, mana, defense) {
 		super(name, health, mana, defense);
+	}
+
+	skill() {
+		console.log('Terimalah serangan sihir ini..');
 	}
 }
 
@@ -36,18 +48,15 @@ class SummonHero {
 
 		if (chooseHero > 85) {
 			let hero = new Mage('Mage', 1130, 603, 231);
-			hero.skill('Terimalah serangan sihir ini..');
 			return hero;
 			// console.log(hero.skill());
 			
 		} else if (chooseHero >= 51 && chooseHero < 85) {
 			let hero = new Knight('Knight', 2130, 203, 131);
-			hero.skill('Lemparan Perisai Suci');
 
 			return hero;
 		} else {
 			let hero = new Assassin('Assassin', 530, 303, 251);
-			hero.skill('Ciat..! Serangan tanpa bayangan..');
 			return hero;
 		}
 	}
@@ -69,9 +78,9 @@ console.log(hero)
 //output yang diharapkan (output akan random jadi tidak perlu sesuai dengan contoh ini)
 //Mage {name: Assassin, health: 1130, mana: 603, defense: 231}
 
+
+// SummonHero.panggil().skill()
 console.log(hero.skill());
-
-
 //output yang diharapkan (output akan random jadi tidak perlu sesuai dengan contoh ini)
 //‘Assassin mengeluarkan skill: Ciat..! Serangan tanpa bayangan..’
 
