@@ -46,4 +46,7 @@ let pos2 = [0,0,0,0,2,1,0];
 let pos3 = [2,0,0,1,0,0,2];
 let pos4 = [0,0,0,1,0];
 
+console.log(closestEnemy(pos1));
+console.log(closestEnemy(pos2));
+console.log(closestEnemy(pos3));
 console.log(closestEnemy(pos4));
