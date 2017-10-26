@@ -31,9 +31,9 @@ function closeEnemy(arr){
 	}
 
 	if (tempJarak === tempPrajurit){
-		position = "left and right";
+		return "You are surrounded by enemy !!  " +tempJarak+" space on the left and right side";
 	}
-	return  "your closest enemy "+tempJarak+" space on the "+position+" from your position"
+	return  "Your closest enemy "+tempJarak+" space on the "+position+" from your position"
 }
 
 console.log(closeEnemy([1,0,0,0,2,2,2]))
