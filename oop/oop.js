@@ -43,32 +43,27 @@ class SummonHero{
     this.random = 0
   }
 
-  acak(){
-    this.random += Math.floor(Math.random() * 100) + 1
-    return this.random
+  static acak(){
+    let rand = Math.floor(Math.random() * 100) + 1
+    return rand
   }
 
-  panggil(){
-
-    let container = []
-    // console.log(this.acak());
+  static panggil(){
     if(this.acak() > 85){
-      container.push(new Mage('Mage', 1130, 603, 231))
+      return new Mage('Mage', 1130, 603, 231)
     }else if(this.acak() < 85){
-      container.push(new Knight('Knight', 3213, 126, 431))
+      return new Knight('Knight', 3213, 126, 431)
     }else if(this.acak() < 50){
-      container.push(new Assassin('Assassin', 1200, 543, 431))
+      return new Assassin('Assassin', 1200, 543, 431)
     }
 
-    return container
-  }
-
-  skill(){
-    return `Terimalah serangan sihir ini..`
   }
 
 }
 
-let summon = new SummonHero()
-console.log(summon.panggil());
-// console.log(summon.panggil().skill())
+// let summon = new SummonHero()
+// console.log(summon.panggil());
+// console.log(SummonHero.panggil().skill())
+let hero = SummonHero.panggil()
+console.log(hero);
+console.log(hero.skill())
