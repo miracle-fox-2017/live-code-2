@@ -5,11 +5,14 @@ class Hero{
     this.mana=mana;
     this.defense=defense
   }
+  skill(){
+    
+  }
 }
 class Assasin extends Hero{
   constructor(){
   super()
-  this.name = Assassin
+  this.name = 'Assassin'
   this.health= 1200
   this.mana= 543
   this.defense= 431
@@ -21,7 +24,7 @@ class Assasin extends Hero{
 class Knight extends Hero{
   constructor(){
   super()
-  this.name = Knigth
+  this.name = 'Knigth'
   this.health= 3213
   this.mana= 126
   this.defense= 431
@@ -32,7 +35,7 @@ class Knight extends Hero{
 class Mage extends Hero{
   constructor(){
     super()
-    this.name = Mage
+    this.name = 'Mage'
     this.health= 1130
     this.mana= 603
     this.defense= 231
@@ -45,19 +48,26 @@ class SummonHero{
 
   static acak(){
     let random = Math.floor(Math.random()*100)
+    // console.log(random);
     return random
   }
   static panggil(){
-    if(acak()>=85){
-      return new Mage()
+    let random = this.acak()
+
+    if(random>=85){
+      let result = new Mage()
+      return result
     }
-    else if(acak()>50 && acak()<85){
-      return new Knight()
+    else if(random>50 && random<85){
+      let result = new Knight()
+      return result
     }
-    else if(acak()<50){
-      return new Assasin()
+    else if(random<50){
+      let result = new Assasin()
+      return result
     }
   }
 }
-
+// console.log(SummonHero.acak());
 console.log(SummonHero.panggil());
+console.log(SummonHero.panggil().skill);
