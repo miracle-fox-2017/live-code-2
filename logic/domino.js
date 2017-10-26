@@ -36,4 +36,4 @@ function dominoCard(nesArr, arr){
 	}
 }
 
-dominoCard([[3,3],[6,5],[3,4],[2,1]], [0,0])
+dominoCard([[3,3],[6,5],[3,4],[2,1]], [2,3])
