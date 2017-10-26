@@ -7,15 +7,8 @@ function getCombinations(word)
     {
       for (let j = i; j < word.length; j++)
       {
-        let temp = ''
-        for (let k = 0; k < limit; k++)
-        {
-          temp += word[k]
-        }
-        result.push(temp);
-        limit++;
+        result.push(word[j])
       }
-      limit = 1;
     }
     return result;
 }
