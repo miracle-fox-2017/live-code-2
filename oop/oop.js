@@ -9,37 +9,33 @@ class Hero{
 }
 class Assasin extends Hero{
   constructor(){
-  super()
-  this.name = 'Assassin'
-  this.health= 1200
-  this.mana= 543
-  this.defense= 431
-  this.skill='Ciat..! Serangan tanpa bayangan.'
+  super('Assassin',1200,543,431)
 
+
+  }
+  skill(){
+    return 'Ciat..! Serangan tanpa bayangan.'
   }
 }
 
 class Knight extends Hero{
   constructor(){
-  super()
-  this.name = 'Knigth'
-  this.health= 3213
-  this.mana= 126
-  this.defense= 431
-  this.skill='Lemparan Perisai Suci'
+  super('Knight',3213,126,431)
+  }
+  skill(){
+    return 'Lemparan Perisai Suci'
   }
 }
 
 class Mage extends Hero{
   constructor(){
-    super()
-    this.name = 'Mage'
-    this.health= 1130
-    this.mana= 603
-    this.defense= 231
-    this.skill='Terimalah serangan sihir ini..'
+    super('Mage',1130,603,231)
+  }
+  skill(){
+    return 'Terimalah serangan sihir ini..'
   }
 }
+
 
 
 class SummonHero{
@@ -65,10 +61,8 @@ class SummonHero{
       return result
     }
   }
-  skill(){
 
-  }
 }
 // console.log(SummonHero.acak());
 console.log(SummonHero.panggil());
-console.log(SummonHero.panggil().skill);
+console.log(SummonHero.panggil().skill());
