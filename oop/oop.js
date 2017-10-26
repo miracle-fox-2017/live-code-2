@@ -5,9 +5,7 @@ class Hero{
     this.mana=mana;
     this.defense=defense
   }
-  skill(){
-    
-  }
+
 }
 class Assasin extends Hero{
   constructor(){
@@ -66,6 +64,9 @@ class SummonHero{
       let result = new Assasin()
       return result
     }
+  }
+  skill(){
+
   }
 }
 // console.log(SummonHero.acak());
