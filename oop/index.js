@@ -1,41 +1,6 @@
-class Hero {
-  constructor(name,health,mana,defense) {
-    this.name = name
-    this.health = health
-    this.mana = mana
-    this.defense = defense
-  }
-}
-
-class Assassin extends Hero{
-  constructor(name,health,mana,defense) {
-    super(name,health,mana,defense)
-  }
-
-  skill() {
-    console.log('Ciat..! Serangan tanpa bayangan..');
-  }
-}
-
-class Knight extends Hero{
-  constructor(name,health,mana,defense) {
-    super(name,health,mana,defense)
-  }
-
-  skill() {
-    console.log('Lemparan Perisai Suci');
-  }
-}
-
-class Mage extends Hero{
-  constructor(name,health,mana,defense) {
-    super(name,health,mana,defense)
-  }
-
-  skill() {
-    console.log('Terimalah serangan sihir ini..');
-  }
-}
+const Assassin = require('./assassin')
+const Knight = require('./knight')
+const Mage = require('./mage')
 
 class SummonHero {
   static acak() {
