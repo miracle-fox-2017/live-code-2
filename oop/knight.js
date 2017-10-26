@@ -12,3 +12,7 @@ class Knight extends Hero {
     }
 
 }
+
+module.exports = Knight
+// /console.log(Hero.skill())
+

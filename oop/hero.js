@@ -5,9 +5,7 @@ class Hero {
         this.mana = 543
         this.defense = 431
     }
-    static skill() {
-        return 'Ciat..! Serangan tanpa bayangan..'
-    }
+    
 }
 
 module.exports = Hero

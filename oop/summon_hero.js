@@ -1,3 +1,6 @@
+const Mage = require('./mage')
+const Knight = require('./knight')
+const Assasin = require('./assasin')
 
 class SummonHero {
 
