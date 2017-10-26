@@ -1,9 +1,9 @@
+const Hero = require('./hero.js');
 
 class Mage extends Hero {
-  super();
-  this.name = 'Mage';
-  this.health = 1130;
-  this.mana = 603;
-  this.defense = 231;
-  this.skill = 'Terimalah serangan sihir ini..'
+  constructor() {
+    super('Mage', 1130, 603, 231);
+  }
 }
+
+module.exports = Mage;

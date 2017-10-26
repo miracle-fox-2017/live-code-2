@@ -1,14 +1,10 @@
+const Hero = require('./hero.js');
 
 class Assassin extends Hero {
-  super();
-  this.name = 'Assassin';
-  this.health = 1200;
-  this.mana = 543;
-  this.defense = 431;
-  this.skill = 'Ciat..! Serangan tanpa bayangan..';
+  constructor() {
+    super('Assassin', 1200, 543, 431);
+  }
+
 }
 
-// Name: Assassin
-// Health: 1200
-// Mana: 543
-// Defense: 431
+module.exports = Assassin;

@@ -1,7 +1,9 @@
-class SummonHero {
-  constructor() {
+const Hero = require('./hero.js');
+const Assassin = require('./assassin.js');
+const Knight = require('./knight.js');
+const Mage = require('./mage.js');
 
-  }
+class SummonHero {
 
   static acak() {
     let acak = Math.floor(Math.random() * 100) + 1;
@@ -13,16 +15,15 @@ class SummonHero {
     let number = SummonHero.acak();
     let answer;
     if (number > 85) {
-      answer = 'hero Mage';
+      answer = new Mage();
     } else if (number > 50 && this.number < 85) {
-      answer = 'hero Knight';
+      answer = new Knight();
     } else if (number <= 50) {
-      answer = 'hero Assassin';
+      answer = new Assassin();
     }
+
     return answer;
   }
 }
-module.exports = SummonHero;
 
-// console.log(SummonHero.acak());
-// console.log(SummonHero.panggil());
+module.exports = SummonHero;
