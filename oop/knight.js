@@ -7,8 +7,8 @@ class Knight extends Hero{
     this.mana = 126
     this.defense =431
   }
-  skill(){
-    return `Lemparan Perisai Suci`
+  static skill(){
+    console.log(`Lemparan Perisai Suci`)
   }
 }
 module.exports = Knight;

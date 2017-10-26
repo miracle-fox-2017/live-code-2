@@ -7,8 +7,9 @@ class Assassin extends Hero{
     this.mana = 543
     this.defense =431
   }
-  skill(){
-    return `Ciat..! Serangan tanpa bayangan..`
+  static skill(){
+    console.log(`Ciat..! Serangan tanpa bayangan..`)
   }
 }
+// console.log(Assassin.skill());
 module.exports = Assassin;

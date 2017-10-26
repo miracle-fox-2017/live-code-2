@@ -22,6 +22,7 @@ class SummonHero {
       return assassin
       // Assasin
     }
+    // return panggil()
   }
 
 }
