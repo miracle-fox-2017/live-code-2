@@ -1,4 +1,4 @@
-//your code here
+//your code here // hint => indexof
 function closestEnemy(array){
   let prajurit  = array[0]
   let musuh     = array[1]
