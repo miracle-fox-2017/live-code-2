@@ -1,11 +1,11 @@
 class Hero {
-    constructor() {
-        this.name = "Assasin"
-        this.health = 1200
-        this.mana = 543
-        this.defense = 431
+    constructor(name, health, mana, defense) {
+        this.name = "Assasin" name
+        this.health = 1200 health
+        this.mana = 543 mana
+        this.defense = 431 defense
     }
-    static skill() {
+    skill() {
         return 'Ciat..! Serangan tanpa bayangan..'
     }
 }

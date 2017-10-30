@@ -2,7 +2,9 @@ function closestEnemy(arr) {
     let satu = []
     let dua = []
     let hasil = []
+    let hasilabs = []
     let jarak;
+    let jarakabs;
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] == 1) {
@@ -14,16 +16,29 @@ function closestEnemy(arr) {
 
     for (let j = 0; j < satu.length; j++) {
         for (let k = 0; k < dua.length; k++) {
-            jarak = Math.abs(satu[j] - dua[k])
+            jarak = satu[j] - dua[k]
             hasil.push(jarak)
+            jarakabs = Math.abs(satu[j] - dua[k])
+            hasilabs.push(jarakabs)
+
         }
     }
+    //console.log(hasil, hasilabs)
 
 
     if (hasil.length == 0) {
         return "There is no enemy!"
     } else {
-        return `You are surrounded by enemy!! ${Math.min(...hasil)} space on the right and the left side`
+        for (let a = 0; a < hasil.length; a++) {
+            if (hasil[a] < 0) {
+                return `You are surrounded by enemy!! ${Math.min(...hasilabs)} space on the right side`
+            } else if (hasil[a] > 0) {
+                return `You are surrounded by enemy!! ${Math.min(...hasilabs)} space on the left side`
+            } else {
+                return `You are surrounded by enemy!! ${Math.min(...hasilabs)} space on the right and the left side`
+            }
+        }
+
     }
 
 }

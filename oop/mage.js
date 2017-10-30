@@ -1,14 +1,10 @@
 const Hero = require('./hero')
 class Mage extends Hero {
     constructor() {
-        super()
-        this.name = 'Mage'
-        this.health = 113
-        this.mana = 603
-        this.defense = 231
+        super('Mage', 113, 603, 231)
     }
 
-    static skill() {
+    skill() {
         return 'Terimalah serangan sihir ini...'
     }
 

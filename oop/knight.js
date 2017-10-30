@@ -1,13 +1,10 @@
 const Hero = require('./hero')
 class Knight extends Hero {
     constructor() {
-        super()
-        this.name = "Knight"
-        this.health = 3213
-        this.mana = 126
+        super("Knight", 3213, 126, 431)
     }
 
-    static skill() {
+    skill() {
         return 'Lemparan Perisai Suci'
     }
 

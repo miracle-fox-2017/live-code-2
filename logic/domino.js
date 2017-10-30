@@ -4,12 +4,12 @@ function dominoCard(arr, arrDeckMeja) {
     let hasil
     let hasilJumlah = []
     let hasilMax =0
+    let arrJumlah
     
     for (let i = 0; i < arrDeckMeja.length; i++) {
         for (let j = 0; j < arr.length; j++) {
             for (let k = 0; k < arr.length; k++) {
                 if (arrDeckMeja[i] == arr[j][k]) {
-
                     arrHasil.push(arr[j])
                 }
             }
@@ -25,10 +25,11 @@ function dominoCard(arr, arrDeckMeja) {
             hasil = arrHasil[i][0] + arrHasil[i][1]
            if(hasil > hasilMax){
               hasilMax = hasil;
+              arrJumlah = arrHasil[i]
            }
 
         }
-        return `Keluarkan kartu ${hasilMax}`
+        return `Keluarkan kartu [${arrJumlah}]`
     }
    
     
